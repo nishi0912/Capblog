@@ -1,0 +1,15 @@
+version: "1.29.2"
+services:
+  capblogfrontend:
+    build: 
+      context: .
+    container_name: capblogfrontenddocker
+    environment:
+      CHOKIDAR_USEPOLLING: "true"    
+    ports:
+      - '3005:3005'
+    volumes:
+      - .:/Users/nishithshetty/Workspace/capblog
+      - /Users/nishithshetty/Workspace/capblog/node_modules
+    stdin_open: true
+    tty: true
